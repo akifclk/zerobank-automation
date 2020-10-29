@@ -33,6 +33,21 @@ public class AccountActivityPage extends BasePage{
     @FindBy(xpath = "//*[@id='filtered_transactions_for_account']/table/tbody/tr/td[1]")
     public List<WebElement> datesList;
 
+    @FindBy(xpath = "//div[@id='filtered_transactions_for_account']//tbody/tr//td[2]")
+    public List<WebElement> descriptionList;
+
+    @FindBy(xpath = "//div[@id='filtered_transactions_for_account']//tbody/tr//td[3]")
+    public List<WebElement> depositList;
+
+    @FindBy(xpath = "//div[@id='filtered_transactions_for_account']//tbody/tr//td[4]")
+    public List<WebElement> withdrawalList;
+
+    @FindBy(id = "aa_description")
+    public WebElement descriptionInput;
+
+    @FindBy(id = "aa_type")
+    public WebElement selectType;
+
 
     public void verifyAccountDropdown(String expectedValue){
         Select dropdown = new Select(accountDropdown);

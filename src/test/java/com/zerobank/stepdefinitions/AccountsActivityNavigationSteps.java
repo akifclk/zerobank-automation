@@ -8,8 +8,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 public class AccountsActivityNavigationSteps {
     @When("the user clicks on {string} link on the Account Summary page")
@@ -33,7 +31,5 @@ public class AccountsActivityNavigationSteps {
     public void the_user_accesses_the_Find_Transactions_tab(){
         MainPage mainPage = new MainPage();
         mainPage.navigateToModule("Account Activity","Find Transactions");
-//        AccountActivityPage accountActivityPage = new AccountActivityPage();
-//        accountActivityPage.navigateToModule("Find Transactions");
     }
 }
