@@ -1,6 +1,7 @@
 package com.zerobank.pages;
 
 import com.zerobank.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -39,6 +40,12 @@ public class AccountSummaryPage extends BasePage{
         }else if(element.equals("Loan")){
             loan.click();
         }
+
+    }
+
+    public String getH2Names(int queue){
+        String name = Driver.get().findElement(By.xpath("//h2["+queue+"]")).getText();
+        return name;
     }
 
 

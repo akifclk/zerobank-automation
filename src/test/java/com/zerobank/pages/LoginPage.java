@@ -27,10 +27,10 @@ public class LoginPage {
     @FindBy(linkText = "Forgot your password ?")
     public WebElement forgotPassword;
 
-    public void login(){
+    @FindBy(xpath = "//div[@class='alert alert-error']")
+    public WebElement errorMessage;
 
-        String username = ConfigurationReader.get("username");
-        String password = ConfigurationReader.get("password");
+    public void login(String username, String password){
 
         userNameInput.sendKeys(username);
         passwordInput.sendKeys(password);

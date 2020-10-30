@@ -32,7 +32,7 @@ Feature: Navigating	to specific	accounts in	Accounts Activity
   Scenario Outline: <activities> Account Redirect
     Given the user is logged in
     When the user clicks on "<activities>" link on the Account Summary page
-    Then the Account Activity page should be displayed
+    Then "Account Activity" page should be displayed
     And Account	drop down should have "<activities>" selected
 
     Examples:

@@ -46,7 +46,7 @@ public class AccountActivityPage extends BasePage{
     public WebElement descriptionInput;
 
     @FindBy(id = "aa_type")
-    public WebElement selectType;
+    public WebElement typeDropdown;
 
 
     public void verifyAccountDropdown(String expectedValue){
